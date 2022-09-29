@@ -12,14 +12,7 @@ export default function DietForm(props) {
     });
   };
 
-  console.log(
-    "🚀 ~ file: DietForm.js ~ line 8 ~ DietForm ~ formData",
-    formData
-  );
-
-  const preventFunc = (e) => {
-    e.preventDefault();
-  };
+  const preventFunc = (e) => e.preventDefault();
 
   return (
     <form onSubmit={preventFunc} className="diet-form">

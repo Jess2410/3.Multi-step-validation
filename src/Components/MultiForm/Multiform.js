@@ -11,9 +11,9 @@ import HateLove from "./SubForms/HateLove";
 export default function Multiform() {
   const [formIndex, setformIndex] = useState(1);
   const [allFormData, setAllFormData] = useState({
-    dieetForm: "",
+    dietForm: "",
     foodStyle: [],
-    allergie: [],
+    allergies: [],
     prefs: {},
   });
 
@@ -23,6 +23,9 @@ export default function Multiform() {
     if (data) {
       const newData = { ...allFormData };
       const firstPropNewData = Object.keys(data)[0];
+
+      newData[firstPropNewData] = data[firstPropNewData];
+      setAllFormData(newData);
     }
   };
 
